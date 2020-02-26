@@ -1,0 +1,12 @@
+version: "3"
+services:
+  fakeproduct:
+    build: fakeproduct
+    container_name: fakeproduct
+    ports:
+      - "8080:8080"
+  db:
+    image: postgres:latest
+    container_name: fakeproduct_postgres
+    environment:
+      POSTGRES_PASSWORD: password

@@ -1,3 +1,9 @@
+var pg = require('pg');
+
+var conString = "postgres://postgres:password@db:5432/postgres";
+var client = new pg.Client(conString);
+client.connect();
+
 var express = require('express')
 var app = express()
 const product = 'Fake Product'
